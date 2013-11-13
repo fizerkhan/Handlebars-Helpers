@@ -13,7 +13,7 @@
  *  @courtesy - https://github.com/umdjs/umd/blob/master/returnExports.js
  */
 
-(function (root, factory) {
+(function(root, factory) {
     if (typeof exports === 'object') {
         // Node. Does not work with strict CommonJS, but
         // only CommonJS-like enviroments that support module.exports,
@@ -26,7 +26,7 @@
         // Browser globals (root is window)
         root.returnExports = factory(root.Handlebars);
     }
-}(this, function (Handlebars) {
+}(this, function(Handlebars) {
 
     /**
      * If Equals
@@ -137,7 +137,8 @@
      * from http://phpjs.org/functions/nl2br:480
      */
     Handlebars.registerHelper('nl2br', function(text) {
-        var nl2br = (text + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + '<br>' + '$2');
+        var nl2br = (text + '')
+            .replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + '<br>' + '$2');
         return new Handlebars.SafeString(nl2br);
     });
 
